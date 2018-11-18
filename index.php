@@ -26,16 +26,14 @@ if($connection==false){
 }
 ?>
 
-
 <br>
-
 <form action="index.php" class="form">
 	<b>1 table</b><br>
 	Enter rows amount:<input type="number" name="rows_fst" required><br>
 	Enter table width:<input type="number" name="width_fst" required><br>(standart: rows=6; width=500)<input type="submit" value="Submit">
 </form>
-
 <br>
+	
 <?php
 $n=6; $w=500;
 $counter=0;
@@ -65,7 +63,6 @@ for($i=0; $i<$n; $i++){
 			echo "4th cell";
 		echo "</td>";
 	}
-
 	echo "<td colspan=\"" .($n-$i). "\" width=\"".  floor($w/$n) ."\">";
 	$counter++;
 	if($counter%4 == 0)
@@ -87,7 +84,6 @@ echo "</table>";
 <br>
 
 <?php
-
 $n=8;$w=500;
 $counter=0;
 if($_GET['rows_sec'] > 0 and $_GET['width_sec'] > 0 and $_GET['width_sec'] < 3000 and $_GET['rows_sec'] < 1000 ){
@@ -106,8 +102,6 @@ else
 	echo "Table 2: rows=" . $n . "; width=" . $w;
 
 echo "<table border=\"1px\" width=\"" . $w . "px\">";
-
-
 $check = false;
 for($i=1; $i<$n+1; $i++){
 	if($counter%8 == 0 and $counter != 0){
@@ -117,7 +111,7 @@ for($i=1; $i<$n+1; $i++){
 	}
 	else{
 		echo "<tr>";
-
+		
 		echo "<td rowspan=\"" .($n-$i+1).  "\" width=\"".  floor($w/$n) ."\">";
 		$counter++;
 		if($counter%4 == 0)
@@ -136,11 +130,8 @@ for($i=1; $i<$n+1; $i++){
 			$counter++;
 			if($counter%4 == 0)
 				echo "4th cell";
-			
-			
 			echo "</td>";
 		}
-
 		echo "</tr>";
 	}
 }
@@ -165,7 +156,6 @@ if($_GET['rows_trd']>0 and $_GET['col_trd']>0 and $_GET['width_trd']>0 and $_GET
 	$m=$_GET['col_trd'];
 	$w=$_GET['width_trd'];
 	mysqli_query($connection, "INSERT INTO `correct` (`№table`, `rows`,`colloms`, `width`) VALUES (\"third\", \"". $n . "\", \"" . $m ."\", \"" . $w."\");");
-	
 }
 elseif($_GET['rows_trd'] != 0){
 	echo "<b>something went wrong</b><br><br>";
@@ -219,7 +209,6 @@ if($_GET['rows_fth']>0 and $_GET['col_fth']>0 and $_GET['width_fth']>0 and $_GET
 	$m=$_GET['col_fth'];
 	$w=$_GET['width_fth'];
 	mysqli_query($connection, "INSERT INTO `correct` (`№table`, `rows`,`colloms`, `width`) VALUES (\"forth\", \"". $n . "\", \"" . $m ."\", \"" . $w."\");");
-
 }
 elseif($_GET['rows_sec'] != 0){
 	echo "<b>something went wrong</b><br><br>";
@@ -233,9 +222,7 @@ else
 echo "<table border=\"1px\" width=\"" . $w . "px\"  height=\"" . $n*20 . "px\" style=\"table-layout: fixed;\">";
 $merge=3;
 for($i=0; $i<$n; $i++){
-
 	echo "<tr>";
-
 		if($i==0){
 			for($j=0; $j<$m; $j++, $merge++){
 				echo "<td rowspan=\"". $merge . "\" height=\"" . $merge*20 . "px\">";
@@ -248,7 +235,6 @@ for($i=0; $i<$n; $i++){
 			}
 		}
 		else{
-
 			if($i%3 == 0)
 				$size=floor(($m+2)/3);
 			elseif(($i+1)%3 != 0)
@@ -271,12 +257,10 @@ for($i=0; $i<$n; $i++){
 				echo "</td>";
 			}
 		}
-
 	echo "</tr>";
 }
 echo "</table>";
 ?>
-
 <br><br>
 
 </body>
