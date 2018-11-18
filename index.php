@@ -80,10 +80,8 @@ echo "</table>";
 <br><br>
 <form action="index.php" class="form">
 	<b>2 table</b><br>
-	Enter rows amount:<br>
-	<input type="number" name="rows_sec" required></input><br>
-	Enter table width:<br>
-	<input type="number" name="width_sec" required></input><br>(standart: rows=8; width=500)<br>
+	Enter rows amount:<input type="number" name="rows_sec" required><br>
+	Enter table width:<input type="number" name="width_sec" required><br>(standart: rows=8; width=500)<br>
 	<input type="submit" value="Submit" required></input>
 </form>
 <br>
@@ -152,12 +150,9 @@ echo "</table>";
 <br><br>
 <form action="index.php" class="form">
 	<b>3 table</b><br>
-	Enter rows amount:<br>
-	<input type="number" name="rows_trd" required></input><br>
-	Enter colloms amount:<br>
-	<input type="number" name="col_trd" required></input><br>
-	Enter table width:<br>
-	<input type="number" name="width_trd" required></input><br>(standart: rows=6; colloms=4; width=500)<br>
+	Enter rows amount:<input type="number" name="rows_trd" required><br>
+	Enter colloms amount:<input type="number" name="col_trd" required><br>
+	Enter table width:<input type="number" name="width_trd" required><br>(standart: rows=6; colloms=4; width=500)<br>
 	<input type="submit" value="Submit" required></input>
 </form>
 <br>
@@ -209,12 +204,9 @@ echo "</table>";
 <br><br>
 <form action="index.php" class="form">
 	<b>4 table</b><br>
-	Enter rows amount:<br>
-	<input type="number" name="rows_fth" required></input><br>
-	Enter colloms amount:<br>
-	<input type="number" name="col_fth" required></input><br>
-	Enter table width:<br>
-	<input type="number" name="width_fth" required></input><br>(standart: rows=7; colloms=8; width=500)<br>
+	Enter rows amount:<input type="number" name="rows_fth" required><br>
+	Enter colloms amount:<input type="number" name="col_fth" required><br>
+	Enter table width:<input type="number" name="width_fth" required><br>(standart: rows=7; colloms=8; width=500)<br>
 	<input type="submit" value="Submit" required></input>
 </form>
 <br>
