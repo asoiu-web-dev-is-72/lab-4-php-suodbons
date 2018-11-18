@@ -30,7 +30,8 @@ if($connection==false){
 <form action="index.php" class="form">
 	<b>1 table</b><br>
 	Enter rows amount:<input type="number" name="rows_fst" required><br>
-	Enter table width:<input type="number" name="width_fst" required><br>(standart: rows=6; width=500)<input type="submit" value="Submit">
+	Enter table width:<input type="number" name="width_fst" required><br>(standart: rows=6; width=500)
+	<input type="submit" value="Submit">
 </form>
 <br>
 	
@@ -79,7 +80,7 @@ echo "</table>";
 	<b>2 table</b><br>
 	Enter rows amount:<input type="number" name="rows_sec" required><br>
 	Enter table width:<input type="number" name="width_sec" required><br>(standart: rows=8; width=500)<br>
-	<input type="submit" value="Submit" required></input>
+	<input type="submit" value="Submit" required>
 </form>
 <br>
 
@@ -111,7 +112,7 @@ for($i=1; $i<$n+1; $i++){
 	}
 	else{
 		echo "<tr>";
-		
+
 		echo "<td rowspan=\"" .($n-$i+1).  "\" width=\"".  floor($w/$n) ."\">";
 		$counter++;
 		if($counter%4 == 0)
@@ -144,7 +145,7 @@ echo "</table>";
 	Enter rows amount:<input type="number" name="rows_trd" required><br>
 	Enter colloms amount:<input type="number" name="col_trd" required><br>
 	Enter table width:<input type="number" name="width_trd" required><br>(standart: rows=6; colloms=4; width=500)<br>
-	<input type="submit" value="Submit" required></input>
+	<input type="submit" value="Submit" required>
 </form>
 <br>
 
@@ -197,7 +198,7 @@ echo "</table>";
 	Enter rows amount:<input type="number" name="rows_fth" required><br>
 	Enter colloms amount:<input type="number" name="col_fth" required><br>
 	Enter table width:<input type="number" name="width_fth" required><br>(standart: rows=7; colloms=8; width=500)<br>
-	<input type="submit" value="Submit" required></input>
+	<input type="submit" value="Submit" required>
 </form>
 <br>
 
